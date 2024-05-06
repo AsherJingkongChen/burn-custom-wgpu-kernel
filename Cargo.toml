@@ -1,0 +1,20 @@
+[package]
+authors = ["nathanielsimard <nathaniel.simard.42@gmail.com>", "Asher Jingkong Chen"]
+name = "custom-wgpu-kernel"
+publish = false
+
+[dependencies]
+burn = {version = "0.13.2", default-features = false, features = [
+  "autodiff",
+  "wgpu",
+  "autotune",
+  "template",
+]}
+
+# Serialization
+log = "0.4.21"
+serde = {version = "1.0.200", features = ["std", "derive"]}
+
+# Wgpu internal dependencies
+bytemuck = "1.15.0"
+derive-new = "0.6.0"
